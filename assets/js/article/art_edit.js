@@ -16,7 +16,7 @@ $(function () {
                 if (!res.data.cover_img) {
                     return layer.msg("用户未曾上传头像")
                 }
-                var newImgURL = baseURL + res.data.cover_img;
+                var newImgURL = 'http://ajax.frontend.itheima.net '+ res.data.cover_img;
                 $image
                     .cropper('destroy')      // 销毁旧的裁剪区域
                     .attr('src', newImgURL)  // 重新设置图片路径
